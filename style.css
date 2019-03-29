@@ -212,19 +212,67 @@ section{
     min-height: 100%;
 }
 
+
+/* Home */
 .home{
-    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
+
+.home-sub{
+    position: absolute;
+    width: 470px;
+}
+
+.home-sub > h1{
+    font-size: 72px;
+    color: #fff;
+}
+
+.home-title::before{
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 8px;
+    height: 0;
+    background: #red;
+    animation: bigger-title 2s 1s;
+    animation-fill-mode: forwards;
+}
+
+.home-title > span{
+    color: #34bbff;
+}
+
+
+
+
+
+
+
 
 .about{
-    background: green;
+    display: flex;
+    background: #34bbff;
+    justify-content: center;
+    align-items: center;
+}
+
+.about > div{
+    padding: 0 60px;
+}
+.title-about{
+    padding-bottom: 20px;
 }
 
 
-
-
-
-
+.pedro-photo{
+    height: 400px;
+    width: auto;
+}
 
 
 /* footer */

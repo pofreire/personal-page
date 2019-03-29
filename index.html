@@ -29,18 +29,43 @@
 
             <div class="collapse navbar-collapse" style="display:flex;">
 				<ul class="navbar-nav ml-auto flex-row">
-					<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+					<li class="nav-item"><a class="nav-link" style="color: #34bbff;" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#home">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#home">About-me</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#home">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About-me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
 				</ul>
 			</div>
         </div>
     </nav>
 
-    <section class="home" id="particles-js">
+    <section class="home" id="" data-section="home">
+        <div id="particles-js" ></div>
 
+        <div class="home-sub">
+            <h1 class="home-title">Construindo a sua <span>idéia!<span></h1>
+        </div>
 	</section>
+
+    <section class="about" id="about" data-section="about">
+        <div class="container">
+            <h2 class="title-about">Mussum Ipsum, cacilds vidis litro abertis.</h2>
+            <p>Mussum Ipsum, cacilds vidis litro abertis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!
+                Diuretics paradis num copo é motivis de denguis. A ordem dos tratores não altera o pão duris. Per aumento de cachacis, eu reclamis. Si num tem leite então bota uma pinga aí cumpadi!
+                Mé faiz elementum girarzis, nisi eros vermeio. Cevadis im ampola pa arma uma pindureta. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose.
+                Leite de capivaris, leite de mula manquis sem cabeça. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
+                Suco de cevadiss deixa as pessoas mais interessantis. Quem manda na minha terra sou euzis! Quem num gosta di mé, boa gentis num é. Pra lá , depois divoltis porris, paradis.
+                Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! In elementis mé pra quem é amistosis quis leo. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.
+            </p>
+        </div>
+
+        <img class="pedro-photo" src="eu.jpg">
+    </section>
+
+    <!-- <section class="contact" id="contact">
+        <div class="home-sub">
+            <h1 class="home-title">Construindo a sua <span>idéia!<span></h1>
+        </div>
+    </section> -->
 
     <!-- <footer class="footer">
         <div class="container">
@@ -48,8 +73,33 @@
         </div>
     </footer> -->
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="particlesjs/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
+
+    <script>
+		$(function() {
+            $.scrollify({
+                section : "section",
+                sectionName : "section-name",
+                interstitialSection : "",
+                easing: "easeOutExpo",
+                scrollSpeed: 1100,
+                offset : 0,
+                scrollbars: true,
+                standardScrollElements: "",
+                setHeights: true,
+                overflowScroll: true,
+                updateHash: true,
+                touchScroll:true,
+                before:function() {},
+                after:function() {},
+                afterResize:function() {},
+                afterRender:function() {}
+              });
+        });
+	</script>
 </body>
 
 </html>
