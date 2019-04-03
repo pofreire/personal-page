@@ -323,12 +323,12 @@ section{
 }
 
 .form{
-    min-height: calc(100% - 40px);
+    min-height: calc(100% - 40px) !important;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
-
+    height: calc(100% - 40px) !important;
 }
 
 .form > .container{
@@ -402,7 +402,6 @@ section{
 
 /* footer */
 .footer{
-    
     background: #34bbff;
     display: flex;
     align-items: center;
