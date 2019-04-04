@@ -86,7 +86,6 @@ html, body{
 #particles-js{
   width: 100%;
   height: 100%;
-  /* background-color: #b61924; */
   background-image: url('');
   background-size: cover;
   background-position: 50% 50%;
@@ -220,7 +219,7 @@ section{
 }
 
 
-/* Home */
+/* home */
 .home-title{
     position: absolute;
     top: 50%;
@@ -228,8 +227,8 @@ section{
     transform: translate(-50%, -50%);
     font-size: 6vw;
     color: #fff;
+    user-select: none;
 }
-
 @media (max-width: 992px){
     .home-title{
         font-size: 7vw;
@@ -258,7 +257,7 @@ section{
 
 
 
-
+/* about-me */
 .profile{
     display: flex;
     background: #34bbff;
@@ -321,8 +320,14 @@ section{
 #gform{
     padding-top: 50px;
 }
+@media (max-width: 668px) {
+    #gform{
+        padding-top: 10px;
+    }
+}
 
 .form{
+    flex-direction: column;
     min-height: calc(100% - 40px) !important;
     display: flex;
     justify-content: center;
@@ -331,11 +336,28 @@ section{
     height: calc(100% - 40px) !important;
 }
 
+.form-title{
+    font-size: 38px;
+    padding: 10px 0;
+    text-align: center;
+}
+@media (max-width: 435px) {
+    .form-title{
+        font-size: 26px;
+        padding: 10px 0;
+    }
+}
+
 .form > .container{
     -webkit-box-flex: 0;
     -ms-flex: 0 0 66.666667%;
     flex: 0 0 66.666667%;
     max-width: 66.666667%;
+}
+@media (max-width: 568px) {
+    .form > .container{
+        max-width: 85%;
+    }
 }
 
 .form-div{
@@ -345,14 +367,44 @@ section{
 
 .form-g{
     width: 49%;
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
+}
+@media (max-width: 668px) {
+    .form-g{
+        width: 100%;
+    }
 }
 
 .form-ta{
     width: 100%;
+    margin-bottom: 1em;
 }
 
-.form-c{
+.form-control.error{
+    border-color: #dc3545;
+    padding-right: calc(1.5em + .75rem);
+    background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="%23dc3545" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>');
+    background-repeat: no-repeat;
+    background-position: center right calc(.375em + .1875rem);
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+.textarea-control.error{
+    background-position: top calc(.375em + .1875rem) right calc(.375em + .1875rem);
+}
+
+.form-control.valid{
+    border-color: #28a745;
+    padding-right: calc(1.5em + .75rem);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%2328a745" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path></svg>');
+    background-repeat: no-repeat;
+    background-position: center right calc(.375em + .1875rem);
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+.textarea-control.valid{
+    background-position: top calc(.375em + .1875rem) right calc(.375em + .1875rem);
+}
+
+.form-control{
     display: block;
     width: 100%;
     height: calc(1.5em + .75rem + 2px);
@@ -364,7 +416,6 @@ section{
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
-    border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
@@ -375,30 +426,31 @@ section{
 .btn-submit{
     display: inline-block;
     font-weight: 400;
-    color: #fff;
+    color: #1d1e20;
     text-align: center;
     vertical-align: middle;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #0882bf;
+    background-color: #34bbff;
     border: 1px solid transparent;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    margin-top: 20px;
 }
-.btn-submit:hover{
-    background: #036596;
+.btn-submit:hover,
+.btn-submit:active,
+.btn-submit:focus{
+    background: #1592d2;
 }
-
 
 #mensage{
     height: 130px;
+    font-family: roboto;
 }
+
 
 /* footer */
 .footer{
@@ -426,5 +478,9 @@ section{
 
 .icon-footer > svg{
     width: 30px;
+    color: #2e3138;
+    transition: 0.2s;
+}
+.icon-footer > svg:hover{
     color: #1d1e20;
 }
