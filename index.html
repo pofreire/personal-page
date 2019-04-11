@@ -25,9 +25,9 @@
         <div class="container">
           <a class="logo"><b>Freire.</b></a>
 
-          <button class="navbar-toggler second-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent23" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="animated-icon2"><span></span><span></span><span></span><span></span></div>
+          <button class="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="animated-icon"><span></span><span></span><span></span><span></span></div>
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -123,6 +123,7 @@
 
 
     <footer class="footer">
+        <a href="#" class="scrollup">Scroll</a>
         <ul class="footer-list">
             <li><a class="icon-footer" id="facebook" rel="nofollow" href="https://www.facebook.com/pfreire0" target="_blank">
                     <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-square" class="svg-inline--fa fa-facebook-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 80v352c0 26.5-21.5 48-48 48h-85.3V302.8h60.6l8.7-67.6h-69.3V192c0-19.6 5.4-32.9 33.5-32.9H384V98.7c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9H184v67.6h60.9V480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48z"></path></svg>
@@ -158,15 +159,27 @@
 
     <script type="text/javascript">
             $(document).ready(function () {
-                $('.first-button').on('click', function () {
-                    $('.animated-icon1').toggleClass('open');
+                $('.nav-button').on('click', function () {
+                    $('.animated-icon').toggleClass('open');
+                    $('.collapse').toggleClass('open');
                 });
-                $('.second-button').on('click', function () {
-                    $('.animated-icon2').toggleClass('open');
+
+
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 100) {
+                        $('.scrollup').fadeIn();
+                    } else {
+                        $('.scrollup').fadeOut();
+                    }
                 });
-                $('.third-button').on('click', function () {
-                    $('.animated-icon3').toggleClass('open');
+
+                $('.scrollup').click(function () {
+                    $("html, body").animate({
+                        scrollTop: 0
+                    }, 600);
+                    return false;
                 });
+                
             });
 
             $(document).on('click', 'a[href^="#"]',function(){
