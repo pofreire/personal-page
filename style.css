@@ -110,7 +110,7 @@ html, body{
     -webkit-transition: all linear .3s;
     -o-transition: all linear .3s;
     transition: all linear .3s;
-    padding-top: 30px;
+    margin-top: 30px;
     background: transparent !important;
 }
 
@@ -183,10 +183,6 @@ html, body{
     .navbar-toggler {
         display: none;
     }
-}
-
-.collapse:not(.show){
-    display: none;
 }
 
 .icon-bar{
@@ -289,6 +285,34 @@ width: 0%;
 left: 50%;
 }
 
+.collapse{
+    transition: .2s;
+}
+
+.collapse.open{
+    display: block !important;
+    position: absolute;
+    margin: 0px auto;
+    left: 50%;
+    transform: translateY(25%);
+}
+.collapse.open>ul{
+    flex-direction: column !important;
+    align-items: center;
+}
+
+.collapse.open li + li{
+    margin-top: 10px;
+}
+
+@media(max-width: 992px){
+    .nav-button{
+        position: absolute;
+        right: 10px;
+        top: -15px;
+        border: none;
+    }
+}
 
 
 
@@ -592,12 +616,69 @@ section{
     font-family: roboto;
 }
 
+.alert-container{
+    position: fixed;
+    z-index: 1060;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.alert-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 28em;
+    max-width: 100%;
+    padding: 1.25em;
+    background: #fff;
+    box-shadow: 3px 3px 6px rgba(0,0,0,.16);
+}
+
+.alert-icon{
+    box-sizing: content-box;
+    width: 5em;
+    height: 5em;
+    margin: 1.25em auto 1.575em;
+}
+.alert-check{
+    fill: #a5dc86;
+}
+.alert-title{
+    position: relative;
+    margin: 0 0 .4em;
+    color: #595959;
+    font-size: 1.875em;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+.alert-text{
+    color: #595959;
+}
+
+.alert-button{
+    margin-top: 20px;
+    border: 0;
+    background: #3085d6;
+    color: #fff;
+    font-size: 1em;
+    padding: 10px 25px;
+}
+
+
+
+
 
 
 .scrollup{
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 40px solid #34bbff;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-bottom: 40px solid #34bbff ;
 
     position: fixed;
     bottom: 50px;
@@ -605,6 +686,12 @@ section{
     display: none;
     text-indent: -9999px;
     background-color: transparent;
+    transition: .2s;
+}
+.scrollup:hover,
+.scrollup:active,
+.scrollup:focus{
+    border-bottom: 40px solid #1592d2;
 }
 @media(max-width: 568px){
     .scrollup{
