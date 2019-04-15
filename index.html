@@ -15,28 +15,27 @@
 
     <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16" />
-
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" media="all" href="style.css"/>
 </head>
 
 <body>
-    <header style="display: block;">
-        <nav class="navbar navbar-dark red lighten-1 mb-4">
+    <header>
+        <nav class="navigation">
             <div class="container">
               <a class="logo"><b>Freire.</b></a>
 
-              <button class="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              <button class="nav-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <div class="animated-icon"><span></span><span></span><span></span><span></span></div>
               </button>
 
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto flex-row">
-                    <li class="nav-item"><a class="nav-link" style="color: #34bbff;" href="#home">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#home">Projetos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+              <div class="navigation-collapse" id="navbarSupportedContent">
+                <ul class="navigation-nav">
+                    <li><a class="nav-link" style="color: #34bbff;" href="#home">Início</a></li>
+                    <li><a class="nav-link" href="#home">Projetos</a></li>
+                    <li><a class="nav-link" href="#about">Sobre</a></li>
+                    <li><a class="nav-link" href="#contact">Contato</a></li>
                 </ul>
               </div>
           </div>
@@ -83,15 +82,10 @@
 
     <section id="projetos" style="display: flex;background: #0d0c0d; flex-direction: column; justify-content: center; align-items: center;">
         <h3>Meus Trabalhos</h3>
-        <p><i>Tem um projeto em mente?</i></p>
-
         <div class="container">
-
             <div>
 
             </div>
-
-
         </div>
     </section> -->
 
@@ -158,179 +152,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="particlesjs/particles.min.js"></script>
     <script src="particlesjs/app.js"></script>
-
-    <script type="text/javascript" src="assets/jquery.scrollify.js"></script>
-    <script type="text/javascript" src="assets/scrollify.js"></script>
-
 	<script type="text/javascript" src="jquery-validation-1.19.0/jquery.validate.min.js"></script>
     <script type="text/javascript" src="jquery-validation-1.19.0/messages_pt_BR.min.js"></script>
     <script type="text/javascript" src="jquery-validation-1.19.0/jquery-validator.js"></script>
-
-    <script type="text/javascript">
-            $(document).ready(function () {
-                $('.nav-button').on('click', function () {
-                    $('.animated-icon').toggleClass('open');
-                    $('.collapse').toggleClass('open');
-                });
-
-
-                $(window).scroll(function () {
-                    if ($(this).scrollTop() > 100) {
-                        $('.scrollup').fadeIn();
-                    } else {
-                        $('.scrollup').fadeOut();
-                    }
-                });
-
-                $('.scrollup').click(function () {
-                    $("html, body").animate({
-                        scrollTop: 0
-                    }, 600);
-                    return false;
-                });
-
-            });
-
-            $(document).on('click', 'a[href^="#"]',function(){
-                var objeto = $($(this).attr('href'));
-                if(objeto.length > 0)
-                    $('html,body').animate({scrollTop: objeto.offset().top},'slow');
-            });
-
-            $(document).on('click', '.alert-button',function(){
-                console.log('fadeOut');
-                $(".alert-container").fadeOut(500);
-            });
-
-
-            function validEmail(email) {
-                var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-                return re.test(email);
-            }
-
-            (function() {
-
-                function validateHuman(honeypot) {
-                    if (honeypot) {  //if hidden form filled up
-                      console.log("Robot Detected!");
-                      return true;
-                    } else {
-                      console.log("Welcome Human!");
-                    }
-                }
-
-                // get all data in form and return object
-                function getFormData(form) {
-                    var elements = form.elements;
-
-                    var fields = Object.keys(elements).filter(function(k) {
-                          return (elements[k].name !== "honeypot");
-                    }).map(function(k) {
-                      if(elements[k].name !== undefined) {
-                        return elements[k].name;
-                      // special case for Edge's html collection
-                      }else if(elements[k].length > 0){
-                        return elements[k].item(0).name;
-                      }
-                    }).filter(function(item, pos, self) {
-                      return self.indexOf(item) == pos && item;
-                    });
-
-                    var formData = {};
-                    fields.forEach(function(name){
-                      var element = elements[name];
-
-                      // singular form elements just have one value
-                      formData[name] = element.value;
-
-                      // when our element has multiple items, get their values
-                      if (element.length) {
-                        var data = [];
-                        for (var i = 0; i < element.length; i++) {
-                          var item = element.item(i);
-                          if (item.checked || item.selected) {
-                            data.push(item.value);
-                          }
-                        }
-                        formData[name] = data.join(', ');
-                      }
-                    });
-
-                    // add form-specific values into the data
-                    formData.formDataNameOrder = JSON.stringify(fields);
-                    formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
-                    formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
-
-                    console.log(formData);
-                    return formData;
-                }
-
-                function handleFormSubmit(event) {  // handles form submit without any jquery
-                    event.preventDefault();           // we are submitting via xhr below
-                    var form = event.target;
-                    var data = getFormData(form);         // get the values submitted in the form
-
-                    // OPTION: Remove this comment to enable SPAM prevention, see README.md
-                    if (validateHuman(data.honeypot)) {  //if form is filled, form will not be submitted
-                      return false;
-                    }
-
-                    if( data.email && !validEmail(data.email) ) {   // if email is not valid show error
-                      var invalidEmail = form.querySelector(".email-invalid");
-                      if (invalidEmail) {
-                        invalidEmail.style.display = "block";
-                        return false;
-                      }
-                  } else {
-
-                     if($(form).valid()){
-                          disableAllButtons(form);
-                          var url = form.action;
-                          var xhr = new XMLHttpRequest();
-                          xhr.open('POST', url);
-                          // xhr.withCredentials = true;
-                          xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                          xhr.onreadystatechange = function() {
-                              console.log(xhr.status, xhr.statusText);
-                              console.log(xhr.responseText);
-                              form.reset();
-                              var formElements = form.querySelector(".form-elements")
-                              // if (formElements) {
-                              //   formElements.style.display = "none"; // hide form
-                              // }
-                              var thankYouMessage = $(".alert-container");
-                              if (thankYouMessage) {
-                                  $('.alert-container').css('display', 'flex');
-                              }
-                              return;
-                          };
-                          // url encode form data for sending as post data
-                          var encoded = Object.keys(data).map(function(k) {
-                              return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
-                          }).join('&');
-                          xhr.send(encoded);
-                        }
-                    }
-                }
-
-                function loaded() {
-                    console.log("Contact form submission handler loaded successfully.");
-                    // bind to the submit event of our form
-                    var forms = document.querySelectorAll("form.gform");
-                    for (var i = 0; i < forms.length; i++) {
-                      forms[i].addEventListener("submit", handleFormSubmit, false);
-                    }
-                };
-                document.addEventListener("DOMContentLoaded", loaded, false);
-
-                function disableAllButtons(form) {
-                    var buttons = form.querySelectorAll("button");
-                    for (var i = 0; i < buttons.length; i++) {
-                      buttons[i].disabled = true;
-                    }
-                }
-            })();
-    </script>
+    <script type="text/javascript" src="assets/index.js"></script>
+    <script type="text/javascript" src="assets/validate-email.js"></script>
 </body>
-
 </html>
