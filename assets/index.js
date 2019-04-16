@@ -1,3 +1,5 @@
+var offheight = 100;
+
 $('.nav-button').on('click', function () {
     $('.animated-icon').toggleClass('open');
     $('.navigation-collapse').toggleClass('open');
@@ -17,7 +19,26 @@ $(window).scroll(function () {
     } else {
         $('.backtotop').fadeOut(500);
     }
+
+    calculateNavActive();
 });
+
+
+var calculateNavActive = function(e){
+  var scroll = $(window).scrollTop();
+
+  $('.nav-link.active').removeClass('active');
+
+  var lastId;
+  $('[data-section-name]').each(function(_, chapter) {
+      var id = chapter.id;
+
+      if($(chapter).offset().top-offheight < scroll) {
+         lastId = id;
+      }
+  });
+     $('.nav-link[href=\'#' + lastId + '\']').addClass('active');
+}
 
 $(document).on('click', 'a[href^="#"]',function(){
     var objeto = $($(this).attr('href'));
@@ -44,4 +65,5 @@ $(document).ready(function () {
         }, 600);
         return false;
     });
+    calculateNavActive();
 });
