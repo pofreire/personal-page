@@ -3,6 +3,22 @@ $('.nav-button').on('click', function () {
     $('.navigation-collapse').toggleClass('open');
 });
 
+// smooth scroll js
+$(window).scroll(function () {
+    var scrolling = $(this).scrollTop();
+    var sticky = $('.navigation');
+    if (scrolling >= 100) {
+        $(sticky).addClass("nav-bg");
+    } else {
+        $(sticky).removeClass("nav-bg");
+    }
+    if (scrolling >= 50) {
+        $('.backtotop').fadeIn(500);
+    } else {
+        $('.backtotop').fadeOut(500);
+    }
+});
+
 $(document).on('click', 'a[href^="#"]',function(){
     var objeto = $($(this).attr('href'));
     if(objeto.length > 0)
