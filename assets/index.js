@@ -1,8 +1,15 @@
 var offheight = 100;
+var nav = $('.navigation-collapse');
+var animateIcon = $('.animated-icon');
 
 $('.nav-button').on('click', function () {
-    $('.animated-icon').toggleClass('open');
-    $('.navigation-collapse').toggleClass('open');
+    animateIcon.toggleClass('open');
+    nav.toggleClass('open');
+});
+
+nav.on("click", "a", function () {
+    animateIcon.removeClass('open');
+    nav.removeClass('open');
 });
 
 // smooth scroll js

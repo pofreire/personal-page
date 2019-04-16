@@ -344,10 +344,9 @@ section{
 }
 @media (max-width: 992px){
     .home-title{
-        font-size: 7vw;
+        font-size: 6vw;
     }
 }
-
 .home-title::before{
     content: ' ';
     position: absolute;
