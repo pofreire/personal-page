@@ -55,6 +55,8 @@ $(document).on('click', 'a[href^="#"]',function(){
 
 $(document).on('click', '.alert-button',function(){
     $(".alert-container").fadeOut(500);
+
+    $('.valid').removeClass('valid');
 });
 
 $(document).ready(function () {
