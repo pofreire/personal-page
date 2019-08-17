@@ -471,9 +471,7 @@ section{
 /* projetos */
 .projects{
   display: flex;
-  /* background: #0d0c0d; */
   background: #0d0c0d;
-
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -499,8 +497,9 @@ section{
 
 .card{
     height: 100%;
-    background: #c3c3c3;
+    background: #363636;
     box-shadow: 3px 3px 6px rgba(0,0,0,.16);
+    transition: all .3s;
 }
 .card:hover{
     background: #34bbff;
