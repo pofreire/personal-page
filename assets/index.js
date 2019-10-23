@@ -57,20 +57,14 @@ document.querySelectorAll('a').forEach(function (element){
 
 // smooth scroll js
 window.addEventListener("scroll", function(element){
-    var scrolling = window.screenY;
+    var scrolling = window.pageYOffset;
     if (scrolling >= 100) {
        navigation.classList.add("nav-bg");
     } else {
         navigation.classList.remove("nav-bg");
     }
-    // if (scrolling >= 50) {
-    //     $('.backtotop').fadeIn(500);
-    // } else {
-    //     $('.backtotop').fadeOut(500);
-    // }
     calculateNavActive();
 });
-
 
 var calculateNavActive = function(e){
   var scroll = window.screenY;
@@ -80,7 +74,6 @@ var calculateNavActive = function(e){
   }catch(e){
 
   }
-
   var lastId;
   document.querySelectorAll('[data-section-name]').forEach(function(chapter){
     var id = chapter.id;
@@ -141,8 +134,6 @@ document.querySelector('.alert-button').addEventListener('click', function(){
           });
     });
     calculateNavActive();
-
-
 
     window.addEventListener('load', function() {
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -229,12 +220,10 @@ document.querySelector('.alert-button').addEventListener('click', function(){
         return formData;
     }
 
-
     function disableAllButtons(form) {
         var buttons = form.querySelectorAll("button");
         for (var i = 0; i < buttons.length; i++) {
         buttons[i].disabled = true;
         }
     }
-
 })();
