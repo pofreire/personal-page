@@ -66,3 +66,16 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+# Personal Page
+
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+[![](https://img.shields.io/badge/author-pedro-purple)]()
+
+Personal page whose objective is to show the projects in which I have already developed or contributed.
+
+#### Licença
+
+MIT © <a href="https://github.com/pofreire/personal-page">Personal Page</a>
+
+> > > > > > > 8d8858440d4bced377eef24318d039fe9232df2a
