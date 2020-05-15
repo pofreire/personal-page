@@ -29,6 +29,10 @@ export const Container = styled.div`
     list-style: none;
   }
 
+  ul li a:hover {
+    color: #34bbff;
+  }
+
   ul li,
   ul li svg {
     color: whitesmoke;
@@ -79,6 +83,10 @@ export const Profile = styled.div`
   max-width: 1140px;
   margin: 0 40px;
   position: relative;
+
+  h2 {
+    margin-bottom: 30px;
+  }
 
   img {
     width: 260px;
