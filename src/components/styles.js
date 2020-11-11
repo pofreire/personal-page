@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 export const H1 = styled.h1`
-  font-size: 5vw;
+  font-size: 4vw;
   color: #fff;
   user-select: none;
   z-index: 1;
+  width: 768px;
+  text-align: center;
 
   span {
     color: #34bbff;
@@ -53,26 +55,28 @@ export const Container = styled.div`
 export const Section = styled.section`
   position: relative;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  scroll-snap-type: y mandatory;
 
   h2 {
     margin-bottom: 50px;
   }
 
-  ul {
+  .btns-search {
     list-style: none;
     display: flex;
     justify-content: space-around;
     max-width: 960px;
     margin-bottom: 30px;
-  }
 
-  ul li + li {
-    margin-left: 10px;
+    li + li {
+      margin-left: 10px;
+    }
   }
 `;
 
@@ -114,8 +118,13 @@ export const Profile = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
 
+    div {
+      padding-left: 0;
+    }
+
     img {
       margin-bottom: 40px;
+      display: none;
     }
   }
 `;
@@ -129,7 +138,11 @@ export const Projetos = styled.div`
   flex-wrap: wrap;
   position: relative;
 
-  div {
+  img {
+    width: calc(100% - 100px);
+  }
+
+  > div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,15 +152,46 @@ export const Projetos = styled.div`
     margin: 5px;
     position: relative;
 
-    a {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    > div {
+      display: none;
 
-      img {
-        width: 200px;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+    &:hover {
+      > div {
+        position: absolute;
+        background: rgb(54 54 54 / 0.8);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+
+        .about-project {
+          text-align: center;
+          padding: 0 30px;
+          p {
+            margin-top: 10px;
+
+            span {
+              background-color: #34bbff;
+              border-radius: 3px;
+              padding: 2px;
+              font-size: 12px;
+            }
+            span + span {
+              margin-left: 3px;
+            }
+          }
+        }
       }
     }
 
@@ -161,6 +205,7 @@ export const Projetos = styled.div`
       left: 0;
       transition: opacity 0.2s ease;
       opacity: 0;
+      z-index: 1;
     }
     &::after {
       content: "";
@@ -217,6 +262,120 @@ export const BtnSearch = styled.div`
 `;
 
 export const Contato = styled.div`
-  max-width: 576px;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  max-width: 1020px;
+  justify-content: space-around;
+
+  .side-contact{
+    width: 200px;
+
+    >div{
+
+      p{
+
+        a{
+          color: inherit;
+        }
+
+        &:hover{
+          color: #34bbff;
+        }
+      }
+
+      p+p{
+        margin-top: 10px;
+      }
+    }
+  }
+
+  @media (min-width: 668px) {
+    form{
+      width: calc(100% - 400px);
+    }
+  }
+
+  @media (max-width: 668px) {
+    flex-direction: column;
+    align-items: center;
+
+    form {
+      padding: 0 40px 40px;
+    }
+  }
+`;
+
+export const Resume = styled.div`
+  flex-direction: row;
+  width: 100%;
+  display: flex;
+  max-width: 1020px;
+
+  > div {
+    :first-child {
+      width: 25%;
+      h2 > span {
+        border-bottom: 3px solid #34bbff;
+      }
+    }
+    :last-child {
+      width: 75%;
+      > div {
+        padding-left: 40px;
+      }
+      p {
+        margin: 5px 0;
+        color: #6e7881;
+      }
+    }
+  }
+
+  @media (max-width: 668px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    > div {
+      :first-child {
+        width: unset;
+        h2 > span {
+          border-bottom: 3px solid #34bbff;
+        }
+      }
+      :last-child {
+        width: unset;
+        > div {
+          padding-left: 40px;
+        }
+        p {
+          margin: 5px 0;
+          color: #6e7881;
+        }
+      }
+    }
+  }
+
+  .work + .work {
+    margin-top: 40px;
+  }
+
+  .skills {
+    list-style: none;
+    padding: 40px 0 40px 40px;
+
+    li {
+      position: relative;
+
+      > h3 {
+        position: absolute;
+        top: -30px;
+      }
+
+    }
+
+    li + li {
+      margin-top: 40px;
+    }
+  }
 `;
