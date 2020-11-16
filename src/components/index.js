@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import {
   Section,
   H1,
@@ -7,6 +7,7 @@ import {
   Contato,
   Resume,
   BtnSearch,
+  ArrowScroll
 } from "./styles";
 
 import Header from "./Header/index";
@@ -111,8 +112,35 @@ function Menu() {
     [tipoAtual]
   );
 
+  const [scroll, setScroll] = useState("none");
+  const [showScroll, setShowScroll] = useState(false)
+
+  function arrowScroll(){
+    setShowScroll(document.body.scrollTop > 100);
+
+      if (document.body.scrollTop < 100) {
+        setScroll("scroll");
+        setShowScroll(false);
+      }
+ };
+
+ useEffect(() => {
+    window.addEventListener("scroll", arrowScroll, true);
+
+    return () => {
+      window.removeEventListener("scroll", arrowScroll, true); 
+    } 
+  }, []);
+
   function handleShow(tipo) {
     setTipoAtual(tipo);
+  }
+
+  function scrollTop() {
+    document.body.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   }
 
   function createMarkup(text) {
@@ -127,6 +155,9 @@ function Menu() {
     <>
       <Particles />
       <Header />
+      
+      <ArrowScroll onClick={()=> scrollTop()} arrowScroll={showScroll} style={{display: showScroll ? 'block' : 'none'}}/>
+
       <Section id="home">
         <H1>
           Building the
