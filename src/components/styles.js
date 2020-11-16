@@ -379,3 +379,27 @@ export const Resume = styled.div`
     }
   }
 `;
+
+export const ArrowScroll = styled.a`
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+  border-bottom: 40px solid #34bbff;
+
+  z-index: 2;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  text-indent: -9999px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:active,
+  &:focus{
+    border-bottom: 40px solid #1592d2;
+  }
+  @media (max-width: 568px) {
+      right: 5px;
+  }
+
+`;
