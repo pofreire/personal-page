@@ -143,7 +143,7 @@ export const Projetos = styled.div`
   position: relative;
 
   img {
-    width: calc(100% - 100px);
+    max-width: calc(100% - 100px);
   }
 
   > div {
