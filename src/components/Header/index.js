@@ -4,8 +4,6 @@ import { Container, Box, StyledMenu, StyledBurger} from "./styles";
 function App() {
   const [open, setOpen] = React.useState(false);
   const node = React.useRef();
-
-  const [clazz, setClazz] = useState("show");
   const [show, setShow] = useState(true);
 
   useEffect(() => {
@@ -20,7 +18,6 @@ function App() {
       setShow(document.body.scrollTop < 20);
 
       if (document.body.scrollTop > 20) {
-        setClazz("scrolled");
         setShow(false);
       }
   }
@@ -121,7 +118,7 @@ function App() {
         </Box>
         <div className="main-menu">
           <div>
-            <a className="logo">
+            <a className="logo" href="/">
               <b>F.</b>
             </a>
 

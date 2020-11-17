@@ -109,17 +109,15 @@ function Menu() {
   const [tipoAtual, setTipoAtual] = useState("all");
   const projetosAtuais = useMemo(
     () => projetos.filter((f) => tipoAtual === "all" || f.tipo === tipoAtual),
-    [tipoAtual]
+    [tipoAtual, projetos]
   );
 
-  const [scroll, setScroll] = useState("none");
   const [showScroll, setShowScroll] = useState(false)
 
   function arrowScroll(){
     setShowScroll(document.body.scrollTop > 100);
 
       if (document.body.scrollTop < 100) {
-        setScroll("scroll");
         setShowScroll(false);
       }
  };
