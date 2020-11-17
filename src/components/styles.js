@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
 export const H1 = styled.h1`
-  font-size: 4vw;
   color: #fff;
   user-select: none;
   z-index: 1;
   width: 768px;
   text-align: center;
+  font-size: 5vw;
+
+  @media(max-width: 768px){
+    font-size: 10vw;
+  }
 
   span {
     color: #34bbff;
@@ -290,10 +294,8 @@ export const Contato = styled.div`
     }
   }
 
-  @media (min-width: 668px) {
-    form{
-      width: calc(100% - 400px);
-    }
+  form{
+    width: calc(100% - 400px);
   }
 
   @media (max-width: 668px) {
@@ -301,6 +303,7 @@ export const Contato = styled.div`
     align-items: center;
 
     form {
+      width: 80%;
       padding: 0 40px 40px;
     }
   }

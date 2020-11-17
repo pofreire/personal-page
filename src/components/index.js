@@ -97,12 +97,24 @@ function Menu() {
       description: "Currently I work with the tool, my start with it was in 2017 and since then I continue to use it.",
     },
     {
+      name: "Hibernate",
+      description: "In all my java projects the framework is used to persist objects.",
+    },
+    {
+      name: "VRaptor",
+      description: "I have been using the framework for three years but I want to migrate to Spring since it is no longer supported, and most Java communities use mostly Spring.",
+    },
+    {
+      name: "MySQL",
+      description: "Using MySQL since 2017, I have good knowledge and I am constantly improving my queries :)",
+    },
+    {
       name: "Ruby on Rails",
       description: "I create two projects using Ruby",
     },
     {
       name: "ReactJS",
-      description: "",
+      description: "I am currently studying React and looking to develop projects to deepen my knowledge with the tool.",
     },
   ];
 
@@ -209,7 +221,7 @@ function Menu() {
       </Section>
 
       <Section id="projects">
-        <h2>Check out some of my works</h2>
+        <h2 style={{textAlign: "center"}}>Check out some of my works</h2>
         <ul className="btns-search">
           <li>
             <BtnSearch onClick={() => handleShow("all")}>All</BtnSearch>

@@ -118,9 +118,9 @@ function App() {
         </Box>
         <div className="main-menu">
           <div>
-            <a className="logo" href="/">
+            <p className="logo" href="/" style={{textDecoration: "none"}}>
               <b>F.</b>
-            </a>
+            </p>
 
             <nav id="nav-menu-container">
               <ul className="nav-menu sf-js-enabled sf-arrows">
