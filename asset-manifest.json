@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.cc504e42.chunk.css",
-    "main.js": "/static/js/main.7ee2631b.chunk.js",
-    "main.js.map": "/static/js/main.7ee2631b.chunk.js.map",
+    "main.js": "/static/js/main.f12a610d.chunk.js",
+    "main.js.map": "/static/js/main.f12a610d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.f01603a9.js",
     "runtime-main.js.map": "/static/js/runtime-main.f01603a9.js.map",
     "static/js/2.01a85759.chunk.js": "/static/js/2.01a85759.chunk.js",
     "static/js/2.01a85759.chunk.js.map": "/static/js/2.01a85759.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.f0dafae1f1ddffce4a6cb2ba2fc4866e.js": "/precache-manifest.f0dafae1f1ddffce4a6cb2ba2fc4866e.js",
+    "precache-manifest.1b9e807282f48ae309786ac8879ec2c8.js": "/precache-manifest.1b9e807282f48ae309786ac8879ec2c8.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.cc504e42.chunk.css.map": "/static/css/main.cc504e42.chunk.css.map",
     "static/js/2.01a85759.chunk.js.LICENSE.txt": "/static/js/2.01a85759.chunk.js.LICENSE.txt",
@@ -18,12 +18,12 @@
     "static/media/pedro.jpg": "/static/media/pedro.18f3d6b4.jpg",
     "static/media/redentor.svg": "/static/media/redentor.a5fae1af.svg",
     "static/media/redplus.png": "/static/media/redplus.e2966697.png",
-    "static/media/reeducando.png": "/static/media/reeducando.b5b7b104.png"
+    "static/media/reeducando.png": "/static/media/reeducando.44124ab3.png"
   },
   "entrypoints": [
     "static/js/runtime-main.f01603a9.js",
     "static/js/2.01a85759.chunk.js",
     "static/css/main.cc504e42.chunk.css",
-    "static/js/main.7ee2631b.chunk.js"
+    "static/js/main.f12a610d.chunk.js"
   ]
 }

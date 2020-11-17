@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "32de04a598661339863900a5de5dcea9",
+    "revision": "4692edd86ab8a711af27ef7e13f8ba04",
     "url": "/index.html"
   },
   {
-    "revision": "a1774e943da8cd16efe6",
+    "revision": "57fe1d42b407e9e17212",
     "url": "/static/css/main.cc504e42.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.01a85759.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a1774e943da8cd16efe6",
-    "url": "/static/js/main.7ee2631b.chunk.js"
+    "revision": "57fe1d42b407e9e17212",
+    "url": "/static/js/main.f12a610d.chunk.js"
   },
   {
     "revision": "61d3044d55b1ab6ab842",
@@ -48,7 +48,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/redplus.e2966697.png"
   },
   {
-    "revision": "b5b7b1049448fcb887042f97da627246",
-    "url": "/static/media/reeducando.b5b7b104.png"
+    "revision": "44124ab3ac6a0393a1c779c3f7afbf20",
+    "url": "/static/media/reeducando.44124ab3.png"
   }
 ]);
