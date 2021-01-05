@@ -243,7 +243,7 @@ export const Projetos = styled.div`
   }
 `;
 
-export const BtnSearch = styled.div`
+export const BtnSearch = styled.button` 
   display: inline-block;
   font-weight: 400;
   color: whitesmoke;
@@ -255,11 +255,11 @@ export const BtnSearch = styled.div`
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.25rem;
-  background-color: transparent;
+  background-color: ${(props) => (props.active ? `#34bbff` : `transparent`)};
   text-decoration: none;
 
   &:hover,
-  :active {
+  :active{
     color: whitesmoke;
     background-color: #34bbff;
   }

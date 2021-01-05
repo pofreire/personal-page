@@ -87,7 +87,7 @@ function Menu() {
     {
       location: "View Tech Informática",
       role: "Computer technician • Sep 2012 - Oct 2015",
-      about: "Maintenance of computers and notebooks",
+      about: "Maintenance of computers and notebooks, customer service.",
     },
   ];
 
@@ -110,7 +110,7 @@ function Menu() {
     },
     {
       name: "Ruby on Rails",
-      description: "I create two projects using Ruby",
+      description: "I created two projects using Ruby on Rails however, none of them for professional purposes. Where one of these projects was just the back end of an API.",
     },
     {
       name: "ReactJS",
@@ -224,15 +224,18 @@ function Menu() {
         <h2 style={{textAlign: "center"}}>Check out some of my works</h2>
         <ul className="btns-search">
           <li>
-            <BtnSearch onClick={() => handleShow("all")}>All</BtnSearch>
+            <BtnSearch active={tipoAtual === "all" ? true : false} 
+              onClick={() => handleShow("all")}>All</BtnSearch>
           </li>
           <li>
-            <BtnSearch onClick={() => handleShow("site")}>
+            <BtnSearch active={tipoAtual === "site" ? true : false} 
+              onClick={() => handleShow("site")}>
               Sites
             </BtnSearch>
           </li>
           <li>
-            <BtnSearch onClick={() => handleShow("system")}>
+            <BtnSearch active={tipoAtual === "system" ? true : false}
+              onClick={() => handleShow("system")}>
               Systems
             </BtnSearch>
           </li>
