@@ -80,8 +80,13 @@ function Menu() {
 
   const works = [
     {
+      location: "Talent Four allocated at Tokio Marine Seguradora",
+      role: "Systems Analyst • Feb 2021 - Currently",
+      about: "Java Programmer",
+    },
+    {
       location: "Centro Universitário Redentor",
-      role: "Systems Analyst • July 2017 - Current",
+      role: "Systems Analyst • July 2017 - Feb 2021",
       about: "Full Stack Java Developer",
     },
     {
@@ -170,9 +175,8 @@ function Menu() {
 
       <Section id="home">
         <H1>
-          Building the
+          Building your
           <br />
-          your&nbsp;
           <Typewriter
             options={{
               loop: true,
@@ -201,16 +205,8 @@ function Menu() {
               Well, I'm 27 years old, I have a bachelor's degree in Information
               Systems from UniRedentor.
               <br />
-              <br />I am a Systems Analyst at the UniRedentor Institution (
-              <a
-                href="http://www.redentor.edu.br"
-                target="_blank"
-                without
-                rel="noopener noreferrer"
-              >
-                www.redentor.edu.br
-              </a>
-              ), and I work directly with the Front / Back-end.
+              <br />
+              I am currently working at Tokio Marine, it is a large insurance company that has several systems in Java, mostly with spring.
             </p>
             <p>
               I always try to do my best for the projects I'm involved in, I'm

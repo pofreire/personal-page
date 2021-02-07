@@ -4,7 +4,6 @@ export const H1 = styled.h1`
   color: #fff;
   user-select: none;
   z-index: 1;
-  width: 768px;
   text-align: center;
   font-size: 5vw;
 
