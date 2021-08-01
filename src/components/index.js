@@ -81,7 +81,7 @@ function Menu() {
   const works = [
     {
       location: "Vórtx DTVM",
-      role: "Full Stack Developer • Feb 2021 - Currently",
+      role: "Full Stack Developer • Mar 2021 - Currently",
       about: "I work with the development and maintenance of systems that carry out operations in the financial market, such as asset pricing, market risk control, liquidity and classification.",
     },
     {
