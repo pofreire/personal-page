@@ -80,14 +80,19 @@ function Menu() {
 
   const works = [
     {
+      location: "Vórtx DTVM",
+      role: "Full Stack Developer • Feb 2021 - Currently",
+      about: "I work with the development and maintenance of systems that carry out operations in the financial market, such as asset pricing, market risk control, liquidity and classification.",
+    },
+    {
       location: "Talent Four allocated at Tokio Marine Seguradora",
-      role: "Systems Analyst • Feb 2021 - Currently",
-      about: "Java Programmer",
+      role: "Systems Analyst • Feb 2021 - Mar 2021",
+      about: "I worked with the development and maintenance of systems related to the insurance area.",
     },
     {
       location: "Centro Universitário Redentor",
       role: "Systems Analyst • July 2017 - Feb 2021",
-      about: "Full Stack Java Developer",
+      about: "I worked as a full Full Stack Developer, where I contributed to the development of several applications in the education segment.",
     },
     {
       location: "View Tech Informática",
@@ -104,6 +109,10 @@ function Menu() {
     {
       name: "Hibernate",
       description: "In all my java projects the framework is used to persist objects.",
+    },
+    {
+      name: "Spring",
+      description: "Since the beginning of 2021, I've been using the framework and improving myself.",
     },
     {
       name: "VRaptor",
@@ -206,7 +215,7 @@ function Menu() {
               Systems from UniRedentor.
               <br />
               <br />
-              I am currently working at Tokio Marine, it is a large insurance company that has several systems in Java, mostly with spring.
+              I currently work at Vórtx DTVM, which is a market infrastructure Fintech.
             </p>
             <p>
               I always try to do my best for the projects I'm involved in, I'm
