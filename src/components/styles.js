@@ -7,7 +7,7 @@ export const H1 = styled.h1`
   text-align: center;
   font-size: 5vw;
 
-  @media(max-width: 768px){
+  @media (max-width: 768px) {
     font-size: 10vw;
   }
 
@@ -99,6 +99,7 @@ export const Profile = styled.div`
     width: 260px;
     height: auto;
   }
+
   div {
     padding-left: 70px;
 
@@ -108,6 +109,7 @@ export const Profile = styled.div`
 
     p + p {
       color: #a1a1a1;
+
       &::before {
         content: " ";
         width: 35px;
@@ -118,6 +120,7 @@ export const Profile = styled.div`
       }
     }
   }
+
   @media (max-width: 768px) {
     flex-direction: column;
 
@@ -168,6 +171,7 @@ export const Projetos = styled.div`
         text-decoration: none;
       }
     }
+
     &:hover {
       > div {
         position: absolute;
@@ -181,6 +185,7 @@ export const Projetos = styled.div`
         .about-project {
           text-align: center;
           padding: 0 30px;
+
           p {
             margin-top: 10px;
 
@@ -190,6 +195,7 @@ export const Projetos = styled.div`
               padding: 2px;
               font-size: 12px;
             }
+
             span + span {
               margin-left: 3px;
             }
@@ -210,6 +216,7 @@ export const Projetos = styled.div`
       opacity: 0;
       z-index: 1;
     }
+
     &::after {
       content: "";
       position: absolute;
@@ -235,6 +242,7 @@ export const Projetos = styled.div`
       top: 0;
       right: 0;
     }
+
     &:hover::after,
     &:hover::before {
       opacity: 1;
@@ -242,7 +250,7 @@ export const Projetos = styled.div`
   }
 `;
 
-export const BtnSearch = styled.button` 
+export const BtnSearch = styled.button`
   display: inline-block;
   font-weight: 400;
   color: whitesmoke;
@@ -258,7 +266,7 @@ export const BtnSearch = styled.button`
   text-decoration: none;
 
   &:hover,
-  :active{
+  :active {
     color: whitesmoke;
     background-color: #34bbff;
   }
@@ -271,29 +279,29 @@ export const Contato = styled.div`
   max-width: 1020px;
   justify-content: space-around;
 
-  .side-contact{
+  .side-contact {
     width: 200px;
 
-    >div{
+    > div {
 
-      p{
+      p {
 
-        a{
+        a {
           color: inherit;
         }
 
-        &:hover{
+        &:hover {
           color: #34bbff;
         }
       }
 
-      p+p{
+      p + p {
         margin-top: 10px;
       }
     }
   }
 
-  form{
+  form {
     width: calc(100% - 400px);
   }
 
@@ -317,15 +325,19 @@ export const Resume = styled.div`
   > div {
     :first-child {
       width: 25%;
+
       h2 > span {
         border-bottom: 3px solid #34bbff;
       }
     }
+
     :last-child {
       width: 75%;
+
       > div {
         padding-left: 40px;
       }
+
       p {
         margin: 5px 0;
         color: #6e7881;
@@ -341,15 +353,19 @@ export const Resume = styled.div`
     > div {
       :first-child {
         width: unset;
+
         h2 > span {
           border-bottom: 3px solid #34bbff;
         }
       }
+
       :last-child {
         width: unset;
+
         > div {
           padding-left: 40px;
         }
+
         p {
           margin: 5px 0;
           color: #6e7881;
@@ -362,7 +378,8 @@ export const Resume = styled.div`
     margin-top: 40px;
   }
 
-  .skills {
+  .skills,
+  .courses {
     list-style: none;
     padding: 40px 0 40px 40px;
 
@@ -397,11 +414,12 @@ export const ArrowScroll = styled.a`
 
   &:hover,
   &:active,
-  &:focus{
+  &:focus {
     border-bottom: 40px solid #1592d2;
   }
+
   @media (max-width: 568px) {
-      right: 5px;
+    right: 5px;
   }
 
 `;
