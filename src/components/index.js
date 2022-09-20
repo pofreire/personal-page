@@ -217,7 +217,7 @@ function Menu() {
                     <div>
                         <h2>Hello, my name is Pedro!</h2>
                         <p>
-                            Well, I'm 28 years old, I have a bachelor's degree in Information
+                            Well, I'm 29 years old, I have a bachelor's degree in Information
                             Systems from UniRedentor.
                             <br/>
                             <br/>
